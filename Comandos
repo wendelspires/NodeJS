@@ -1,0 +1,52 @@
+sudo apt install git
+
+git clone https://github.com/wendelspires/NodeJS.git
+
+#para verificar os arquivos na pasta
+ls
+
+#para renomear o arquivo
+mv noticias.js n.js
+
+#movimento para dentro da pasta
+mv noticias.JS NodeJS
+
+#como está o status do repositório
+git status
+
+
+#adicionar o arquivo ao repositório do github
+git add noticias.js
+
+#para dar o commit
+git commit -m 'iniciar o repositorio'
+
+#para enviar o arquivo para o github
+git push
+
+#para receber os arquivos do github
+git pool
+
+#identificar se ocorreu mudanças
+git status
+
+#identificar aalteração realizada
+git diff
+
+#após a alteração temos que add
+git add
+
+#comitar com a alteração
+git commit -am 'Alteração de texto'
+
+#verificar se está tudo certo
+git status
+
+#enviar para o github
+git push
+
+#verificar meus logs
+git log
+
+#voltar para a versão anterior
+git checkout "os 5 primeiros números"
