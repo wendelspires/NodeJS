@@ -25,7 +25,7 @@ git commit -m 'iniciar o repositorio'
 git push
 
 #para receber os arquivos do github
-git pool
+git pull
 
 #identificar se ocorreu mudanças
 git status
