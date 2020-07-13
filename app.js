@@ -1,23 +1,15 @@
-var express = require('express');
-var msg = require('./mod_teste')();
+var app = require('./config/server');
 
-var app = express();
+var rota_noticias = require('./app/routes/noticias');
+rota_noticias(app);
 
-app.set('view engine', 'ejs');
+var rota_home = require ('./app/routes/home');
+rota_home(app);
 
-// criar as funções request e response para retornar o valor ao acessar a página
-app.get('/',function(req,res){
-  res.render("home/index")
-});
+var rota_formulario_inclusao_noticias = require('./app/routes/formulario_inclusao_noticia')
+rota_formulario_inclusao_noticias(app);
 
-app.get('/formulario_noticia', function(req,res){
-  res.render("admin/form_add_noticia")
-});
-
-app.get('/noticias', function(req,res){
-  res.render("noticias/noticias")
-});
 
 app.listen(3000, function(){
-  console.log(msg);
+  console.log('Servidor ON');
 });
