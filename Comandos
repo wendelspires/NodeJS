@@ -50,3 +50,6 @@ git log
 
 #voltar para a versão anterior
 git checkout "os 5 primeiros números"
+
+#logar no mysql
+mysql -u root -p
