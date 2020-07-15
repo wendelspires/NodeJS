@@ -4,3 +4,6 @@ module.exports = function(app){
     res.render("admin/form_add_noticia")
   });
 }
+
+
+//app.get('/noticias', function(req,res){
