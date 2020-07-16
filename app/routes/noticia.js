@@ -4,10 +4,10 @@ module.exports = function(app){
 
           //conexão com o banco de dados
           var connection = app.config.dbConnection();
-          var noticiasModel = app.app.models.noticiasModel;
+          var noticiasModel = new app.app.models.noticiasModel(connection);
 
 
-          noticiasModel.getNoticia(connection, function(error, result){
+          noticiasModel.getNoticia(function(error, result){
               res.render("noticias/noticia", {noticia : result});
           })
         });
