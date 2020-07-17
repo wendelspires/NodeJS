@@ -9,7 +9,7 @@ module.exports = function(app){
 
     //conexao com o banco de dados
     var connection = app.config.dbConnection();
-    var noticiasModel = new app.app.models.noticiasModel(connection);
+    var noticiasModel = new app.app.models.NoticiasDAO(connection);
 
     //salvar noticia
     noticiasModel.salvarNoticia(noticia, function(error,result){

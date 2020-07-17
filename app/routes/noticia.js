@@ -4,7 +4,7 @@ module.exports = function(app){
 
           //conexão com o banco de dados
           var connection = app.config.dbConnection();
-          var noticiasModel = new app.app.models.noticiasModel(connection);
+          var noticiasModel = new app.app.models.NoticiasDAO(connection);
 
 
           noticiasModel.getNoticia(function(error, result){
